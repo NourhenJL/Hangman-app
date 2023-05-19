@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Guess the word:</p>
+    <form action="/play" method="POST">
+        {% for _ in range(word_length) %}
+            <input type="text" maxlength="1" size="1" name="guess[]" required>
+        {% endfor %}
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
